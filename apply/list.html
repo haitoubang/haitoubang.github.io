@@ -31,31 +31,31 @@
 			    </div>
 			    <div id="applist"></div>
 			   	<script id="applistTpl" type="text/x-dot-template">
-			   		{{? it && it.length>0}}
-				    	{{~it:apply}}
+			   		[[? it && it.length>0]]
+				    	[[~it:apply}}
 					    	<div class="row">
 						    	<div class="status">
-						    		{{=applyList.statusHtml(apply.status)}}
+						    		[[=applyList.statusHtml(apply.status)]]
 						    	</div>
 						    	<div class="title">
 						    		<a href="{{=apply.url}}" target="_blank">{{=apply.job_title}}</a>
 						    	</div>
 						    	<div class="reply">
-						    		{{? apply.status==4}}
+						    		[[? apply.status==4]]
 						    		<a href="javascript:;" data-id="{{=apply.id}}" class="text-success">查看HR回复</a>
-						    		{{? }}
+						    		[[? ]]
 						    	</div>
 						    	<div class="active_time">
-						    		{{=applyList.getDateDiff(apply.create_time*1000)}}
+						    		[[=applyList.getDateDiff(apply.create_time*1000)]]
 						    	</div>
 						    </div>
 						    <hr />
-					    {{~}}
-				    {{?? (!it || it.length<1)  }}
+					    [[~]]
+				    [[?? (!it || it.length<1)  ]]
 				    	<p class="text-center">没有记录</p>
-				    {{??}}
+				    [[??]]
 				    <p class="text-center">没有记录</p>
-				    {{?}}
+				    [[?]]
 			   	</script>
 			   	<div class="pagination clearfix">
 			    </div>
