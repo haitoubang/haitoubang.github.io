@@ -81,7 +81,7 @@
 			        }
 			        var v = /chrome\/(\d+)/i.exec(navigator.userAgent);
 			        if (v && v[1] && parseInt(v[1]) > 20) {
-			            chrome.webstore.install("https://chrome.google.com/webstore/detail/iglncpchjeoojhjofbcgboddgnogjimg");
+			            chrome.webstore.install("https://chrome.google.com/webstore/detail/iglncpchjeoojhjofbcgboddgnogjimg",function(){},function(){});
 			            setTimeout(function () {
 			                var dialog = new Dialog({
 								width:400,
